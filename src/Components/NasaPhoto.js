@@ -1,4 +1,6 @@
 import React from "react";
+import Description from "./Description";
+
 
 const NasaPhoto = (props) => {
     return (
@@ -6,7 +8,7 @@ const NasaPhoto = (props) => {
             <h3>{props.photo.date}</h3>
             <h2>{props.photo.title}</h2>
             <img src={props.photo.url}/>
-            <p>{props.photo.explanation}</p>
+            < Description explanation={props.photo.explanation}/>
         </div>
     )
 }
