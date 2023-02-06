@@ -1,3 +1,10 @@
+#style {
+  
+}
+.description{
+  display: none;
+}
+
 .App {
   text-align: center;
 }

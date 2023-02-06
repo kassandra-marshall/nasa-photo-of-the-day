@@ -3,15 +3,19 @@ import NasaPhoto from "./NasaPhoto";
 import "../style.css"
 
 const Description = (props) => {
-    const [description, setDescription] = useState(props.explanation)
-    function myFunction() {
-        const element = document.querySelector(".style");
-        element.classList.toggle("style");
+    const [description, setDescription] = useState()
+    const [toggle, setToggle] = useState(false)
+    function myFunction(e) {
+        e.preventDefault()
+        const element = document.getElementById("style");
+        element.classList.toggle("description");
+        setDescription(props.explanation)
+        console.log('click')
     }
     
     return(
         <div>
-            <p className="style">{description}</p>
+            <p id="style">{description}</p>
             <button onClick={myFunction}>Description</button>
         </div>
     )
